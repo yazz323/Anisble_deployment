@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: localhost
   tasks:
    - name: install httpd package
      yum:
@@ -10,4 +10,4 @@
        name: httpd
        state: started
 
-  delegate_to: 127.0.0.1   
+
