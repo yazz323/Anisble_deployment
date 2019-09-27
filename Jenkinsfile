@@ -1,5 +1,3 @@
-#!groovy
-
 pipeline {
   agent any
   
@@ -12,7 +10,14 @@ pipeline {
       }
     }
   
-  
+    stage('Deploy Ansible') {
+      steps{
+        script{
+          sh "ansible-playbook -i inventory/inventory deploy_httpd.yml"
+        }  
+      }
+
+    }
   
   }
 }
