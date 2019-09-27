@@ -10,4 +10,4 @@
        name: httpd
        state: started
 
- 
+  delegate_to: 127.0.0.1   
